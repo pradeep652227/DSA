@@ -1,0 +1,79 @@
+/*bool hasCycle(ListNode *head) {
+         if(head==nullptr || head->next==nullptr)
+            return 0;
+        ListNode* slow=head, *fast=head;
+        while(fast!=nullptr){
+            fast=fast->next;
+            if(fast!=nullptr){
+                fast=fast->next;
+                slow=slow->next;//slow will move ahead only when fast has completed covering 02 steps
+            }
+            
+            if(slow==fast)
+            return 1;
+        }
+        return 0;
+    }*/
+
+/*
+ ListNode *detectCycle(ListNode *head) {
+         if(head==nullptr || head->next==nullptr)
+            return nullptr;
+        ListNode* slow=head, *fast=head;
+        while(fast!=nullptr){
+            fast=fast->next;
+            if(fast!=nullptr){
+                fast=fast->next;
+                slow=slow->next;//slow will move ahead only when fast has completed covering 02 steps
+            }
+            
+            if(slow==fast){
+                 slow=head;
+                 break;
+            }
+        }
+        while(fast!=nullptr){
+           if(fast==slow)
+                return fast;
+             fast=fast->next;
+            slow=slow->next;
+           
+        }
+        return nullptr;
+    }*/
+
+/*
+void removeLoop(Node* head)
+    {
+        if(head==nullptr || head->next==nullptr)
+                return;
+            
+        Node* slow=head, *fast=head;
+        Node* prev=nullptr;
+        while(fast!=nullptr){
+            fast=fast->next;
+            if(fast!=nullptr){
+                fast=fast->next;
+                prev=slow;
+                slow=slow->next;//slow will move ahead only when fast has completed covering 02 steps
+            }
+            
+            if(slow==fast){
+                 slow=head;
+                 break;
+            }
+        }
+        while(fast!=nullptr){
+           if(fast==slow){
+               prev->next=nullptr;
+               break;
+           }
+            prev=fast;
+            fast=fast->next;
+            slow=slow->next;
+            
+           
+        }
+       return;
+    }
+*/

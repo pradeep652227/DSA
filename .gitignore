@@ -1,0 +1,6 @@
+.codelite/
+.vscode/
+build-Debug/
+*.workspace
+Makefile
+tags
