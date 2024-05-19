@@ -4,3 +4,4 @@ build-Debug/
 *.workspace
 Makefile
 tags
+.exe
