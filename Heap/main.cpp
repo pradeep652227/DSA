@@ -89,7 +89,9 @@ void Heap::insert(int value){
 
         return;
 }
-
+//Not Always- the node to be deleted can also be an intermediate or inner one so
+//if the node to delete is not a root node then swap the node to delete with leaf node and size=size-1 then heapify the heap.
+//heapify(MaxHeap& maxHeap) {int n=maxHeap.size;}
 void Heap::deleteNode(){
     int lastNodeValue=arr[idx];
     idx--;
