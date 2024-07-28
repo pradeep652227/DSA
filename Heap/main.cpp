@@ -7,6 +7,7 @@ public:
     int size;
     int *arr;
     int idx;
+//size should be n+1 because 0th idx will be for -1 in 1-based array heap implementation
     Heap(int n=0):size{n},arr{nullptr},idx{0}{
         arr=new int[n+1];
         //for 1-based indexing
